@@ -1,0 +1,131 @@
+\documentclass[12pt, letterpaper, fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\renewcommand\thesubsection{\Alph{subsection}}
+
+\title{Homework 1 Solutions}
+\author{Andrew Warner | acw5456@psu.edu}
+\date{September 2018}
+
+\begin{document}
+\maketitle
+\section*{Question 1}
+	\begin{enumerate}
+		\item $S = \{aaf, afa, faa, aff, ffa, faf, aaa, fff\}$
+		\item The two sets are given by:
+			\begin{align*}
+				Z_{f} &= \{ aaf, aff, faf, fff \} \\
+     				X_{a} &= \{ aaf, afa, aff, aaa \}
+			\end{align*}
+		\item No, because $Z_{f} \cap X_{a} \neq \emptyset$
+		\item No, because $Z_{f} \cup X_{a} \neq S$
+		\item  The two sets are given by:
+			\begin{align*}
+				C &= \{aaf, afa, faa, aaa\} \\
+				D &= \{aff, ffa, faf, fff\}
+			\end{align*}
+		 \item Yes, because $C \cap D = \emptyset$
+		 \item Yes, because $C \cup D = S$
+	\end{enumerate}
+\section*{Question 2}
+	\begin{enumerate}
+		\item $P[H_{0}] = P[L \cap H_0] + P[B \cap H_0]$ = 0.1 + 0.3 = 0.4
+		\item $P[B] = P[B \cap H_0] + P[B \cap H_1] + P[B \cap H_2]$ = 0.3 + 0.1 + 0.1 = 0.5
+		\item From the additive property of probabilities
+			\begin{align*}
+				P[L \cup H_2] &= P[L] + P[H_2] - P[L \cap H_2] \\
+				& = P[L] + P[H_2 \cap B] \\
+				&= 0. 1 + 0.1 + 0.3 + 0.1 = 0.6
+			\end{align*}	
+		\item They ARE NOT Independent
+			\begin{align*}
+				P[B] &= 0.5 \\
+				P[H_0] &= 0.4 \\
+				P[B \cap H_0] &\neq P[B]P[H_0] \\
+				0.3 &\neq (0.5)(0.4)
+			\end{align*}
+		\item They ARE Independent
+			\begin {align*}
+				P[B] &= 0.5 \\
+				P[H_1] &= 0.2 \\
+				P[B \cap H_1] &= P[B]P[H_1] \\
+				0.1 &\neq (0.5)(0.2) 
+			\end{align*}
+	\end{enumerate}
+\section*{Question 3}
+	\begin{enumerate}
+		\item The Conditional Probability is given by:
+			\begin{align*}
+				P(E_2 | E_1) &= \frac{P(E_2 \cap E_1)}{P(E_1)} \\
+				&= \frac{|\{243, 423\}|}{|\{234, 243, 423, 432\}|} \\
+				&= \frac{2}{4} = \frac{1}{2}
+			\end{align*}
+		\item This event cannot occur. There are only 3 cards, and one of the cards is even. 
+			Thus, the probability that all 3 cards are even is 0.
+		\item The probability that the second card is even given the first card is odd:
+			\begin{align*}
+				P(E_2 | O_1)  &= \frac{P(E_2 \cap O_1)}{P(O_1)} \\
+				&= \frac{|\{ 324, 342 \}|}{|\{ 324, 342 \}|} \\
+				&= \frac{2}{2} = 1
+			\end{align*}
+		\item Similar to part b, this event cannot occur because there is only 1 odd card.
+			The probability that the second card is odd given the first card is odd must be 0.
+	\end{enumerate}
+\section*{Question 4}
+	\begin{align*}
+		P(E_1 \cap E_2 \cap E_3) &= 0 \neq P(E_1)P(E_2)P(E_3) \\
+		E_1 &= [1 \cap 2] \rightarrow P(E_1) = \frac{1}{4} \\
+		E_2 &= [2 \cap 3] \rightarrow P(E_2) = \frac{1}{4} \\
+		E_3 &= [3 \cap 4] \rightarrow P(E_3) = \frac{1}{4} 
+	\end{align*}
+\section*{Question 5}
+	\begin{enumerate}
+		\item The probability that exactly one photo detector of a pair is acceptable is:
+			\begin{align*}
+				P[One\ Pair\ Acceptable] &= P[A_1, D_2] + P[D_1, A_2] - P[(A_1, D_2) \cap (D_1, A_2)] \\
+				&= P(A_1)P(D_2 | A_1) + P(D_1)P(A_2 | D_1) + 0 \\
+				&= \Big(\frac{3}{5}\Big)\Big(1-\frac{4}{5}\Big) + \Big(1 - \frac{3}{5}\Big)\Big(\frac{2}{5}\Big) \\
+				&= \frac{3}{25} + \frac{4}{25} = \frac{7}{25}
+			\end{align*}
+		\item The probability that both photo detectors in a pair are defective:
+			\begin{align*}
+				P[Both\ Defective] &= P[D_1, D_2] \\
+				&=P(D_1)P(D_2 | D_1) = \Big(\frac{2}{5}\Big) \Big( \frac{3}{5} \Big) = \frac{6}{25}
+			\end{align*}
+	\end{enumerate}
+\section*{Question 6}
+	Swingman at Gaurd
+	\begin{align*}
+		\dbinom{3}{1} \dbinom{4}{1} \dbinom{4}{2} = 72
+	\end{align*}
+	Swingman at Forward
+	\begin{align*}
+		\dbinom{3}{1} \dbinom{4}{2} \dbinom{4}{1} = 72
+	\end{align*}
+	Swingman does not play
+	\begin{align*}
+		\dbinom{3}{1} \dbinom{4}{2} \dbinom{4}{2} = 108
+	\end{align*}
+	72 + 72 + 108 = 252
+\section*{Question 7}
+	\begin{enumerate}
+		\item The probability that a field goal is kicked and made is:
+			\begin{align*}
+				P(K) &= P(G_1)P(|G_1) + P(G_2)P(K|G_2) \\
+				P(K) &= \Big( \frac{1}{3} \Big) \Big( \frac{1}{2} \Big) + \Big( \frac{2}{3} \Big) \Big( \frac{1}{3} \Big) \\
+				P(K) &= \frac{7}{18}
+			\end{align*}
+		\item The events are NOT independent
+			\begin{align*}
+				P(K_1 \cap K_2) &= P(K_1 \cap K_2 | G_1, G_1)P(G_1, G_1)+P(K_1 \cap K_2 | G_1, G_2)P(G_1, G_2)\\
+				& \ \ \ + P(K_1 \cap K_2 | G_2, G_1)P(G_2, G_1) + P(K_1 \cap K_2 | G_2, G_2)P(G_2, G_2 ) \\
+				&= \Big( \frac{1}{4} \Big) \Big( \frac{1}{12} \Big) + \Big( \frac{1}{6} \Big) \Big( \frac{1}{4} \Big) + \Big( \frac{1}{6} \Big) \Big( \frac{1}{4} \Big) + \Big( \frac{1}{9} \Big) \Big( \frac{5}{12} \Big) \\
+				&= \Big( \frac{15}{96} \Big) \\
+				Thus &\\
+				P(K_1, K_2) &\neq P(K_1)P(K_2) \\
+				\Big( \frac{15}{96} \Big) &\neq \Big( \frac{7}{18} \Big) \Big( \frac{7}{18} \Big)
+			\end{align*}
+	\end{enumerate}
+\end{document}
+
